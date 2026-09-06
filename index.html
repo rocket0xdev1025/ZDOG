@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anonnymous Dog | $ZDOG</title>
+  <meta name="description" content="Anonymous Dog is the masked meme legend, bringing mystery, chaos, and unstoppable vibes to crypto." />
+  <meta property="og:title" content="Anonnymous Dog | $ZDOG" />
+  <meta property="og:description" content="Anonymous Dog is the masked meme legend, bringing mystery, chaos, and unstoppable vibes to crypto." />
+  <meta property="og:image" content="banner.jpg" />
+  <meta name="theme-color" content="#1a1410" />
+  <link rel="icon" href="logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Outfit:wght@300;400;500;600;700;800;900&family=Share+Tech+Mono&family=Special+Elite&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            loft: {
+              950: "#0e0b09",
+              900: "#16110e",
+              800: "#241c16",
+              700: "#3a2e24",
+              600: "#5a4636"
+            },
+            kraft: {
+              200: "#f3e6d0",
+              300: "#e8d5b5",
+              400: "#d4b896",
+              500: "#c4a574",
+              600: "#a67c52",
+              700: "#7a5a38"
+            },
+            fur: {
+              300: "#f4c49a",
+              400: "#e8a87c",
+              500: "#d4894a"
+            },
+            snout: {
+              400: "#f4a07a",
+              500: "#e07a5f",
+              600: "#c45d45"
+            },
+            tungsten: "#f0c27a"
+          },
+          fontFamily: {
+            bangers: ["Bangers", "cursive"],
+            outfit: ["Outfit", "sans-serif"],
+            stamp: ["Special Elite", "cursive"],
+            mono: ["Share Tech Mono", "ui-monospace", "monospace"]
+          },
+          boxShadow: {
+            glow: "0 0 40px rgba(232, 168, 124, 0.28)",
+            kraft: "0 18px 40px rgba(0,0,0,0.45), 0 0 0 1px rgba(196,165,116,0.25)",
+            tag: "0 10px 24px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.35)"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root {
+      --ca: "TBA";
+    }
+
+    body {
+      font-family: Outfit, sans-serif;
+      background-color: #0e0b09;
+      color: #f3e6d0;
+    }
+
+    .site-bg {
+      background-image:
+        radial-gradient(ellipse 80% 50% at 70% 20%, rgba(240, 194, 122, 0.12), transparent 55%),
+        linear-gradient(180deg, rgba(14, 11, 9, 0.55) 0%, rgba(14, 11, 9, 0.78) 40%, rgba(14, 11, 9, 0.92) 100%),
+        url("banner.jpg");
+      background-size: cover;
+      background-position: center 30%;
+      background-attachment: fixed;
+    }
+
+    .grain {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      opacity: 0.09;
+      mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    .hero-overlay {
+      background:
+        linear-gradient(90deg, rgba(14, 11, 9, 0.88) 0%, rgba(14, 11, 9, 0.62) 48%, rgba(14, 11, 9, 0.28) 100%),
+        linear-gradient(180deg, rgba(14, 11, 9, 0.25) 0%, rgba(14, 11, 9, 0.15) 50%, rgba(14, 11, 9, 0.85) 100%);
+    }
+
+    .paper {
+      background:
+        linear-gradient(180deg, rgba(232, 213, 181, 0.08), rgba(166, 124, 82, 0.06)),
+        repeating-linear-gradient(0deg, rgba(196, 165, 116, 0.05) 0px, rgba(196, 165, 116, 0.05) 1px, transparent 1px, transparent 8px);
+      background-color: rgba(36, 28, 22, 0.78);
+      border: 1px solid rgba(212, 184, 150, 0.28);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(243, 230, 208, 0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .paper-light {
+      background:
+        radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.18), transparent 40%),
+        linear-gradient(145deg, #e8d5b5 0%, #d4b896 55%, #c4a574 100%);
+      color: #241c16;
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    }
+
+    .torn {
+      clip-path: polygon(
+        0% 2%, 2% 0%, 8% 1.5%, 14% 0%, 22% 2%, 30% 0.5%, 40% 2%, 50% 0%, 62% 2%, 74% 0.5%, 84% 2%, 94% 0%, 100% 2%,
+        100% 98%, 96% 100%, 86% 98%, 74% 100%, 62% 98%, 50% 100%, 38% 98%, 26% 100%, 14% 98%, 4% 100%, 0% 98%
+      );
+    }
+
+    .mask-frame {
+      border-radius: 28% 28% 34% 34% / 22% 22% 38% 38%;
+      box-shadow:
+        0 0 0 6px #c4a574,
+        0 0 0 10px #7a5a38,
+        0 30px 60px rgba(0, 0, 0, 0.55),
+        0 0 50px rgba(232, 168, 124, 0.25);
+    }
+
+    .face-holes {
+      display: flex;
+      gap: 8px;
+      align-items: flex-end;
+    }
+
+    .hole {
+      background: #1c1612;
+      border: 2px solid #a67c52;
+      box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .btn-buy {
+      background: linear-gradient(180deg, #f4c49a 0%, #e8a87c 40%, #d4894a 100%);
+      color: #1a120c;
+      box-shadow: 0 10px 24px rgba(212, 137, 74, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    }
+
+    .btn-buy:hover {
+      filter: brightness(1.08);
+      transform: translateY(-2px);
+    }
+
+    .btn-chart {
+      background: linear-gradient(180deg, rgba(232, 213, 181, 0.16), rgba(36, 28, 22, 0.4));
+      border: 1.5px solid rgba(212, 184, 150, 0.55);
+      color: #f3e6d0;
+    }
+
+    .btn-chart:hover {
+      border-color: #e8a87c;
+      box-shadow: 0 0 24px rgba(232, 168, 124, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .dog-tag {
+      background: linear-gradient(160deg, #d9d3c7 0%, #b7b0a3 45%, #8f877a 100%);
+      color: #1a1612;
+      border-radius: 18px;
+      box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 -2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .stamp {
+      font-family: "Special Elite", cursive;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      border: 2px dashed rgba(224, 122, 95, 0.7);
+      color: rgba(224, 122, 95, 0.9);
+      transform: rotate(-8deg);
+    }
+
+    .ticker {
+      background: rgba(14, 11, 9, 0.85);
+      border-top: 1px solid rgba(196, 165, 116, 0.25);
+      border-bottom: 1px solid rgba(196, 165, 116, 0.25);
+    }
+
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 28s linear infinite;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .paw {
+      position: absolute;
+      opacity: 0.07;
+      fill: #d4b896;
+      pointer-events: none;
+    }
+
+    .floaty {
+      animation: floaty 7s ease-in-out infinite;
+    }
+
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0) rotate(-2deg); }
+      50% { transform: translateY(-12px) rotate(2deg); }
+    }
+
+    .dust span {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      border-radius: 999px;
+      background: rgba(240, 194, 122, 0.55);
+      animation: dust 12s linear infinite;
+    }
+
+    @keyframes dust {
+      0% { transform: translateY(20px); opacity: 0; }
+      10% { opacity: 0.7; }
+      90% { opacity: 0.4; }
+      100% { transform: translateY(-80vh); opacity: 0; }
+    }
+
+    .step-num {
+      font-family: Bangers, cursive;
+      background: radial-gradient(circle at 30% 20%, #f4c49a, #d4894a);
+      color: #1a120c;
+      box-shadow: 0 8px 18px rgba(212, 137, 74, 0.35);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: reveal 0.8s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.35s; }
+    .delay-4 { animation-delay: 0.5s; }
+
+    @keyframes reveal {
+      to { opacity: 1; transform: none; }
+    }
+
+    .nav-blur {
+      background: rgba(14, 11, 9, 0.72);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(196, 165, 116, 0.18);
+    }
+
+    .social-orb {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .social-orb:hover {
+      transform: translateY(-3px) scale(1.06);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4), 0 0 18px rgba(232, 168, 124, 0.3);
+    }
+
+    #toast {
+      transform: translateY(20px);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    #toast.show {
+      transform: none;
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .site-bg, .hero-bg {
+        background-attachment: scroll;
+      }
+    }
+  </style>
+</head>
+<body class="site-bg min-h-screen antialiased overflow-x-hidden">
+  <div class="grain"></div>
+  <div class="dust pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden="true">
+    <span style="left:12%; top:80%; animation-delay:0s"></span>
+    <span style="left:28%; top:90%; animation-delay:3s"></span>
+    <span style="left:47%; top:85%; animation-delay:6s"></span>
+    <span style="left:63%; top:92%; animation-delay:1.5s"></span>
+    <span style="left:81%; top:88%; animation-delay:4.5s"></span>
+  </div>
+
+  <svg class="paw w-24 h-24 top-[18%] left-[6%] rotate-[-18deg]" viewBox="0 0 64 64" aria-hidden="true">
+    <circle cx="16" cy="18" r="8"/><circle cx="32" cy="12" r="8"/><circle cx="48" cy="18" r="8"/><circle cx="22" cy="8" r="6"/><ellipse cx="32" cy="42" rx="16" ry="14"/>
+  </svg>
+  <svg class="paw w-20 h-20 bottom-[28%] right-[8%] rotate-[22deg]" viewBox="0 0 64 64" aria-hidden="true">
+    <circle cx="16" cy="18" r="8"/><circle cx="32" cy="12" r="8"/><circle cx="48" cy="18" r="8"/><circle cx="22" cy="8" r="6"/><ellipse cx="32" cy="42" rx="16" ry="14"/>
+  </svg>
+
+  <!-- NAV -->
+  <header class="nav-blur sticky top-0 z-40">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6">
+      <a href="#top" class="flex items-center gap-3 group">
+        <img src="logo.jpg" alt="Anonnymous Dog logo" class="h-12 w-12 rounded-2xl object-cover ring-2 ring-kraft-500 shadow-glow" />
+        <div>
+          <p class="font-bangers text-2xl tracking-wide text-kraft-300 leading-none group-hover:text-fur-300 transition-colors">Anonnymous Dog</p>
+          <p class="font-mono text-[11px] tracking-[0.28em] text-fur-400">$ZDOG</p>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-kraft-300">
+        <a href="#about" class="hover:text-fur-300 transition-colors">The Legend</a>
+        <a href="#howtobuy" class="hover:text-fur-300 transition-colors">How to Buy</a>
+        <a href="#chart" class="hover:text-fur-300 transition-colors">Chart</a>
+        <a href="#pack" class="hover:text-fur-300 transition-colors">The Pack</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://t.me/AnonnymousZDOG" target="_blank" rel="noopener noreferrer" class="social-orb hidden sm:block" aria-label="Telegram">
+          <img src="tg.png" alt="Telegram" class="h-9 w-9 rounded-full" />
+        </a>
+        <a href="https://x.com/AnonnymousZDOG" target="_blank" rel="noopener noreferrer" class="social-orb hidden sm:block" aria-label="X / Twitter">
+          <img src="x.png" alt="X" class="h-9 w-9 rounded-full object-cover ring-1 ring-kraft-500/40" />
+        </a>
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="btn-buy hidden sm:inline-flex items-center rounded-full px-5 py-2 font-extrabold text-sm tracking-wide transition-all">Buy Now</a>
+        <button id="menuBtn" class="md:hidden rounded-xl border border-kraft-500/40 p-2 text-kraft-300" aria-label="Open menu">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-kraft-500/20 px-4 pb-4">
+      <div class="flex flex-col gap-3 pt-3 text-kraft-300 font-semibold">
+        <a href="#about">The Legend</a>
+        <a href="#howtobuy">How to Buy</a>
+        <a href="#chart">Chart</a>
+        <a href="#pack">The Pack</a>
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="btn-buy mt-1 inline-flex justify-center rounded-full px-5 py-2 font-extrabold text-loft-900">Buy Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" class="relative min-h-[92vh] flex items-center">
+    <div class="hero-overlay absolute inset-0"></div>
+    <div class="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 px-4 py-16 md:grid-cols-[1.15fr_0.85fr] md:px-6 lg:py-24">
+      <div>
+        <div class="reveal delay-1 mb-5 inline-flex items-center gap-3">
+          <span class="face-holes" aria-hidden="true">
+            <span class="hole h-3 w-3 rounded-full"></span>
+            <span class="hole h-3 w-3 rounded-full"></span>
+            <span class="hole h-4 w-4 rounded-full"></span>
+          </span>
+          <span class="font-stamp text-[11px] tracking-[0.32em] text-fur-400">CLASSIFIED // MEME FILE 001</span>
+        </div>
+
+        <h1 class="reveal delay-2 font-bangers text-6xl leading-[0.9] text-kraft-200 drop-shadow-[0_6px_0_rgba(0,0,0,0.45)] sm:text-7xl lg:text-8xl">
+          Anonnymous<br />
+          <span class="text-fur-400">Dog</span>
+          <span class="ml-3 align-middle rounded-full border border-snout-500/60 bg-snout-500/15 px-4 py-1 font-outfit text-lg tracking-widest text-snout-400">$ZDOG</span>
+        </h1>
+
+        <p class="reveal delay-3 mt-6 max-w-xl text-lg leading-relaxed text-kraft-300/90 sm:text-xl">
+          Anonymous Dog is the masked meme legend, bringing mystery, chaos, and unstoppable vibes to crypto.
+        </p>
+        <p class="reveal delay-3 mt-3 max-w-xl text-sm text-kraft-400/80">
+          Nobody knows the face. Everybody knows the bag. The loft is open. The pack is forming. $ZDOG does not sit. $ZDOG hunts candles.
+        </p>
+
+        <div class="reveal delay-4 mt-8 flex flex-wrap items-center gap-4">
+          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="btn-buy inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-lg font-black tracking-wide transition-all">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c.6 3.4-1.5 5-3.8 6.6C5.4 10.4 3 12.2 3 16a9 9 0 0 0 18 0c0-3.6-2-6.4-4.7-8.2C13.8 6.3 12.8 5.2 12 2z"/></svg>
+            Buy Now
+          </a>
+          <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="btn-chart inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-lg font-bold tracking-wide transition-all">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 17l6-6 4 4 8-8"/></svg>
+            Chart
+          </a>
+        </div>
+
+        <div class="reveal delay-4 mt-8 max-w-xl">
+          <p class="mb-2 font-stamp text-xs tracking-[0.28em] text-kraft-400">CONTRACT ADDRESS</p>
+          <div class="dog-tag flex items-center gap-3 px-4 py-3">
+            <span class="relative flex h-8 w-8 shrink-0 items-center justify-center">
+              <span class="absolute inset-0 rounded-full border-2 border-loft-800/70"></span>
+              <span class="h-3 w-3 rounded-full bg-loft-800"></span>
+            </span>
+            <div class="min-w-0 flex-1">
+              <p class="font-stamp text-[10px] tracking-[0.2em] text-loft-800/80">$ZDOG · SOLANA</p>
+              <p id="caText" class="truncate font-mono text-sm font-bold tracking-wide text-loft-900 sm:text-base">TBA</p>
+            </div>
+            <button id="copyBtn" type="button" class="shrink-0 rounded-full bg-loft-900 px-4 py-2 text-xs font-extrabold tracking-wider text-kraft-200 hover:bg-loft-800 transition-colors">
+              COPY CA
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative mx-auto w-full max-w-md">
+        <div class="absolute -inset-8 rounded-[40%] bg-fur-500/20 blur-3xl"></div>
+        <div class="stamp absolute -left-2 top-4 z-20 px-3 py-1 text-xs sm:-left-6">MASKED</div>
+        <div class="stamp absolute -right-1 bottom-16 z-20 rotate-12 px-3 py-1 text-xs border-kraft-600 text-kraft-700 sm:-right-4" style="color:#7a5a38;border-color:#7a5a38">UNSTOPPABLE</div>
+        <img src="logo.jpg" alt="Masked Anonnymous Dog" class="mask-frame floaty relative z-10 w-full object-cover" />
+        <p class="mt-4 text-center font-stamp text-xs tracking-[0.3em] text-kraft-400">IDENTITY: REDACTED · VIBES: CONFIRMED</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker relative z-10 overflow-hidden py-3">
+    <div class="ticker-track font-bangers text-2xl tracking-wide text-kraft-400">
+      <span class="px-6">$ZDOG</span><span class="px-6 text-fur-400">•</span>
+      <span class="px-6">MYSTERY</span><span class="px-6 text-fur-400">•</span>
+      <span class="px-6">CHAOS</span><span class="px-6 text-fur-400">•</span>
+      <span class="px-6">UNSTOPPABLE VIBES</span><span class="px-6 text-fur-400">•</span>
+      <span class="px-6">MASKED MEME LEGEND</span><span class="px-6 text-fur-400">•</span>
+      <span class="px-6">THE PACK IS WATCHING</span><span class="px-6 text-fur-400">•</span>
+      <span class="px-6">$ZDOG</span><span class="px-6 text-fur-400">•</span>
+      <span class="px-6">MYSTERY</span><span class="px-6 text-fur-400">•</span>
+      <span class="px-6">CHAOS</span><span class="px-6 text-fur-400">•</span>
+      <span class="px-6">UNSTOPPABLE VIBES</span><span class="px-6 text-fur-400">•</span>
+      <span class="px-6">MASKED MEME LEGEND</span><span class="px-6 text-fur-400">•</span>
+      <span class="px-6">THE PACK IS WATCHING</span><span class="px-6 text-fur-400">•</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="relative z-10 mx-auto max-w-7xl px-4 py-20 md:px-6">
+    <div class="mb-10 flex items-end justify-between gap-4">
+      <div>
+        <p class="font-stamp text-xs tracking-[0.32em] text-snout-400">DOSSIER</p>
+        <h2 class="font-bangers text-5xl text-kraft-200 sm:text-6xl">The Legend</h2>
+      </div>
+      <div class="face-holes hidden sm:flex" aria-hidden="true">
+        <span class="hole h-4 w-4 rounded-full"></span>
+        <span class="hole h-4 w-4 rounded-full"></span>
+        <span class="hole h-5 w-5 rounded-full"></span>
+      </div>
+    </div>
+
+    <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+      <article class="paper torn relative overflow-hidden p-8 md:p-10">
+        <div class="stamp absolute right-6 top-8 px-3 py-1 text-[10px]">TOP SECRET</div>
+        <p class="font-stamp text-sm text-fur-400">WANTED ON SOLANA</p>
+        <h3 class="mt-2 font-bangers text-4xl text-kraft-200">The Masked Meme Legend</h3>
+        <p class="mt-5 text-lg leading-relaxed text-kraft-300">
+          Anonymous Dog is the masked meme legend, bringing mystery, chaos, and unstoppable vibes to crypto.
+          Born in a dusty loft, raised on tungsten light, and armed with nothing but a kraft-paper bag and a stare that prints green candles.
+        </p>
+        <p class="mt-4 leading-relaxed text-kraft-400">
+          No roadmap can contain him. No doxx can unmask him. $ZDOG is the signal in the noise — a pack-first Solana meme with one rule: stay anonymous, stay barking, stay unstoppable.
+        </p>
+        <ul class="mt-8 grid gap-3 sm:grid-cols-3">
+          <li class="rounded-2xl border border-kraft-500/25 bg-loft-950/50 px-4 py-3 text-center">
+            <p class="font-bangers text-2xl text-fur-400">Mystery</p>
+            <p class="text-xs text-kraft-400">Bag stays on</p>
+          </li>
+          <li class="rounded-2xl border border-kraft-500/25 bg-loft-950/50 px-4 py-3 text-center">
+            <p class="font-bangers text-2xl text-snout-400">Chaos</p>
+            <p class="text-xs text-kraft-400">Loft never sleeps</p>
+          </li>
+          <li class="rounded-2xl border border-kraft-500/25 bg-loft-950/50 px-4 py-3 text-center">
+            <p class="font-bangers text-2xl text-kraft-300">Vibes</p>
+            <p class="text-xs text-kraft-400">Unstoppable</p>
+          </li>
+        </ul>
+      </article>
+
+      <aside class="relative overflow-hidden rounded-[2rem] border border-kraft-500/30 shadow-kraft">
+        <img src="banner.jpg" alt="Anonnymous Dog in the loft" class="h-full min-h-[320px] w-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-loft-950/90 via-transparent to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-6">
+          <p class="font-stamp text-xs tracking-[0.28em] text-tungsten">LAST SEEN: THE LOFT</p>
+          <p class="font-bangers text-3xl text-kraft-200">If you know, you woof.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- HOW TO BUY -->
+  <section id="howtobuy" class="relative z-10 mx-auto max-w-7xl px-4 py-10 md:px-6 md:py-16">
+    <div class="mb-10 text-center">
+      <p class="font-stamp text-xs tracking-[0.32em] text-snout-400">MISSION BRIEFING</p>
+      <h2 class="font-bangers text-5xl text-kraft-200 sm:text-6xl">How to Buy $ZDOG</h2>
+      <p class="mx-auto mt-3 max-w-2xl text-kraft-400">Four steps. One bag. Welcome to Solana. Follow the scent and join the masked pack.</p>
+    </div>
+
+    <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+      <article class="paper relative p-6">
+        <div class="step-num mb-5 flex h-14 w-14 items-center justify-center rounded-full text-3xl">1</div>
+        <div class="mb-3 h-1 w-12 rounded-full bg-fur-400"></div>
+        <h3 class="font-bangers text-3xl text-kraft-200">Get a Wallet</h3>
+        <p class="mt-3 text-sm leading-relaxed text-kraft-400">
+          Download <span class="text-kraft-200 font-semibold">Phantom</span> or <span class="text-kraft-200 font-semibold">Solflare</span>. This is your secret identity on Solana — keep the seed phrase in the vault, never in the loft group chat.
+        </p>
+      </article>
+
+      <article class="paper relative p-6">
+        <div class="step-num mb-5 flex h-14 w-14 items-center justify-center rounded-full text-3xl">2</div>
+        <div class="mb-3 h-1 w-12 rounded-full bg-fur-400"></div>
+        <h3 class="font-bangers text-3xl text-kraft-200">Load SOL</h3>
+        <p class="mt-3 text-sm leading-relaxed text-kraft-400">
+          Buy <span class="text-kraft-200 font-semibold">SOL</span> on an exchange and send it to your wallet. SOL is the fuel. No SOL, no swap, no legend.
+        </p>
+      </article>
+
+      <article class="paper relative p-6">
+        <div class="step-num mb-5 flex h-14 w-14 items-center justify-center rounded-full text-3xl">3</div>
+        <div class="mb-3 h-1 w-12 rounded-full bg-fur-400"></div>
+        <h3 class="font-bangers text-3xl text-kraft-200">Open the Swap</h3>
+        <p class="mt-3 text-sm leading-relaxed text-kraft-400">
+          Hit <span class="text-kraft-200 font-semibold">Buy Now</span> to open pump.fun with SOL already set as input and $ZDOG as output. Connect the wallet. Stay masked.
+        </p>
+      </article>
+
+      <article class="paper relative p-6">
+        <div class="step-num mb-5 flex h-14 w-14 items-center justify-center rounded-full text-3xl">4</div>
+        <div class="mb-3 h-1 w-12 rounded-full bg-fur-400"></div>
+        <h3 class="font-bangers text-3xl text-kraft-200">Swap & Howl</h3>
+        <p class="mt-3 text-sm leading-relaxed text-kraft-400">
+          Swap SOL for <span class="text-kraft-200 font-semibold">$ZDOG</span>, confirm, and you are in the pack. Mystery, chaos, and unstoppable vibes — now with a bag that matches the mask.
+        </p>
+      </article>
+    </div>
+
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+      <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="btn-buy inline-flex items-center rounded-full px-8 py-3.5 text-lg font-black transition-all">Buy $ZDOG Now</a>
+      <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="btn-chart inline-flex items-center rounded-full px-8 py-3.5 text-lg font-bold transition-all">View Chart</a>
+    </div>
+  </section>
+
+  <!-- CHART -->
+  <section id="chart" class="relative z-10 mx-auto max-w-7xl px-4 py-16 md:px-6">
+    <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <p class="font-stamp text-xs tracking-[0.32em] text-snout-400">LIVE LOFT FEED</p>
+        <h2 class="font-bangers text-5xl text-kraft-200 sm:text-6xl">$ZDOG Chart</h2>
+      </div>
+      <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="btn-chart rounded-full px-5 py-2 text-sm font-bold">Open Dexscreener</a>
+    </div>
+    <div class="paper overflow-hidden p-2 md:p-3">
+      <style>
+        #dexscreener-embed { position: relative; width: 100%; padding-bottom: 125%; }
+        @media (min-width: 1024px) { #dexscreener-embed { padding-bottom: 62%; } }
+        #dexscreener-embed iframe { position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: 0; border-radius: 1rem; }
+      </style>
+      <div id="dexscreener-embed">
+        <iframe
+          title="Dexscreener $ZDOG chart"
+          src="https://dexscreener.com/solana/TBA?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartLeftToolbar=0&chartDefaultOnMobile=1&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
+          allow="clipboard-write"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACK / SOCIALS -->
+  <section id="pack" class="relative z-10 mx-auto max-w-7xl px-4 py-16 md:px-6">
+    <div class="paper-light torn relative overflow-hidden px-6 py-12 text-center md:px-16">
+      <p class="font-stamp text-xs tracking-[0.32em] text-snout-600">ASSEMBLE</p>
+      <h2 class="mt-2 font-bangers text-5xl text-loft-900 sm:text-6xl">Join the Pack</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-loft-800">
+        Anonymous Dog is the masked meme legend, bringing mystery, chaos, and unstoppable vibes to crypto.
+        The loft doors are open. Bark in the group. Leave paw prints on the timeline.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-6">
+        <a href="https://t.me/AnonnymousZDOG" target="_blank" rel="noopener noreferrer" class="social-orb flex items-center gap-3 rounded-full bg-loft-900 px-6 py-3 text-kraft-200">
+          <img src="tg.png" alt="" class="h-10 w-10 rounded-full" />
+          <span class="font-extrabold">Telegram</span>
+        </a>
+        <a href="https://x.com/AnonnymousZDOG" target="_blank" rel="noopener noreferrer" class="social-orb flex items-center gap-3 rounded-full bg-loft-900 px-6 py-3 text-kraft-200">
+          <img src="x.png" alt="" class="h-10 w-10 rounded-full object-cover" />
+          <span class="font-extrabold">Twitter / X</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="relative z-10 border-t border-kraft-500/20 bg-loft-950/80">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 py-10 md:flex-row md:px-6">
+      <div class="flex items-center gap-3">
+        <img src="logo.jpg" alt="" class="h-10 w-10 rounded-xl object-cover ring-1 ring-kraft-500" />
+        <div>
+          <p class="font-bangers text-xl text-kraft-300">Anonnymous Dog</p>
+          <p class="font-mono text-[11px] tracking-[0.25em] text-fur-400">$ZDOG · SOLANA</p>
+        </div>
+      </div>
+      <p class="max-w-md text-center text-xs leading-relaxed text-kraft-500 md:text-right">
+        $ZDOG is a meme token created for entertainment. Crypto is chaotic. Do your own research. Not financial advice. The bag hides the face — not the risk.
+      </p>
+      <div class="flex items-center gap-3">
+        <a href="https://t.me/AnonnymousZDOG" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><img src="tg.png" alt="Telegram" class="h-8 w-8 rounded-full" /></a>
+        <a href="https://x.com/AnonnymousZDOG" target="_blank" rel="noopener noreferrer" aria-label="X"><img src="x.png" alt="X" class="h-8 w-8 rounded-full object-cover ring-1 ring-kraft-500/40" /></a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="fixed bottom-6 left-1/2 z-50 -translate-x-1/2 rounded-full bg-kraft-300 px-5 py-2 font-bold text-loft-900 shadow-kraft">
+    CA copied to clipboard
+  </div>
+
+  <script>
+    const CA = "TBA";
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const copyBtn = document.getElementById("copyBtn");
+    const toast = document.getElementById("toast");
+    const caText = document.getElementById("caText");
+
+    if (caText) caText.textContent = CA;
+
+    menuBtn?.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    document.querySelectorAll("#mobileMenu a").forEach((link) => {
+      link.addEventListener("click", () => mobileMenu.classList.add("hidden"));
+    });
+
+    async function copyCA() {
+      try {
+        await navigator.clipboard.writeText(CA);
+      } catch {
+        const area = document.createElement("textarea");
+        area.value = CA;
+        document.body.appendChild(area);
+        area.select();
+        document.execCommand("copy");
+        area.remove();
+      }
+      toast.classList.add("show");
+      copyBtn.textContent = "COPIED";
+      setTimeout(() => {
+        toast.classList.remove("show");
+        copyBtn.textContent = "COPY CA";
+      }, 1800);
+    }
+
+    copyBtn?.addEventListener("click", copyCA);
+  </script>
+</body>
+</html>
