@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anonnymous Dog | $ZDOG</title>
+  <title>ZDOGEE | $ZDOGE</title>
   <meta name="description" content="Anonymous Dog is the masked meme legend, bringing mystery, chaos, and unstoppable vibes to crypto." />
-  <meta property="og:title" content="Anonnymous Dog | $ZDOG" />
+  <meta property="og:title" content="ZDOGEE | $ZDOGE" />
   <meta property="og:description" content="Anonymous Dog is the masked meme legend, bringing mystery, chaos, and unstoppable vibes to crypto." />
   <meta property="og:image" content="banner.jpg" />
   <meta name="theme-color" content="#1a1410" />
@@ -63,7 +63,7 @@
   </script>
   <style>
     :root {
-      --ca: "2AiLHx92Kznuj1Q84b8gzY15qu8TmXLm2wbRLZM5pump";
+      --ca: "TBA";
     }
 
     body {
@@ -242,6 +242,75 @@
       box-shadow: 0 8px 18px rgba(212, 137, 74, 0.35);
     }
 
+    #howtobuy {
+      scroll-margin-top: 5.5rem;
+    }
+
+    .buy-path {
+      position: relative;
+    }
+
+    @media (min-width: 1280px) {
+      .buy-path::before {
+        content: "";
+        position: absolute;
+        top: 46px;
+        left: 10%;
+        right: 10%;
+        height: 2px;
+        background: repeating-linear-gradient(
+          90deg,
+          rgba(196, 165, 116, 0.55) 0 10px,
+          transparent 10px 18px
+        );
+        pointer-events: none;
+      }
+    }
+
+    .step-card {
+      position: relative;
+      z-index: 1;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .step-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(232, 168, 124, 0.5);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.5), 0 0 28px rgba(232, 168, 124, 0.14);
+    }
+
+    .step-icon {
+      display: grid;
+      place-items: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      color: #f0c27a;
+      background: linear-gradient(180deg, rgba(244, 196, 154, 0.18), rgba(36, 28, 22, 0.45));
+      border: 1px solid rgba(212, 184, 150, 0.35);
+    }
+
+    .bnb-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(240, 194, 122, 0.45);
+      background: rgba(14, 11, 9, 0.55);
+      padding: 8px 14px;
+    }
+
+    .swap-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 4.5rem;
+      border-radius: 999px;
+      padding: 0.45rem 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
     .reveal {
       opacity: 0;
       transform: translateY(24px);
@@ -312,10 +381,10 @@
   <header class="nav-blur sticky top-0 z-40">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6">
       <a href="#top" class="flex items-center gap-3 group">
-        <img src="logo.jpg" alt="Anonnymous Dog logo" class="h-12 w-12 rounded-2xl object-cover ring-2 ring-kraft-500 shadow-glow" />
+        <img src="logo.jpg" alt="ZDOGEE logo" class="h-12 w-12 rounded-2xl object-cover ring-2 ring-kraft-500 shadow-glow" />
         <div>
-          <p class="font-bangers text-2xl tracking-wide text-kraft-300 leading-none group-hover:text-fur-300 transition-colors">Anonnymous Dog</p>
-          <p class="font-mono text-[11px] tracking-[0.28em] text-fur-400">$ZDOG</p>
+          <p class="font-bangers text-2xl tracking-wide text-kraft-300 leading-none group-hover:text-fur-300 transition-colors">ZDOGEE</p>
+          <p class="font-mono text-[11px] tracking-[0.28em] text-fur-400">$ZDOGE</p>
         </div>
       </a>
 
@@ -327,13 +396,10 @@
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="https://t.me/AnonnymousZDOG" target="_blank" rel="noopener noreferrer" class="social-orb hidden sm:block" aria-label="Telegram">
-          <img src="tg.png" alt="Telegram" class="h-9 w-9 rounded-full" />
-        </a>
-        <a href="https://x.com/AnonnymousZDOG" target="_blank" rel="noopener noreferrer" class="social-orb hidden sm:block" aria-label="X / Twitter">
+        <a href="https://x.com/AnonnymousZDOGE" target="_blank" rel="noopener noreferrer" class="social-orb hidden sm:block" aria-label="X / Twitter">
           <img src="x.png" alt="X" class="h-9 w-9 rounded-full object-cover ring-1 ring-kraft-500/40" />
         </a>
-        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=2AiLHx92Kznuj1Q84b8gzY15qu8TmXLm2wbRLZM5pump" target="_blank" rel="noopener noreferrer" class="btn-buy hidden sm:inline-flex items-center rounded-full px-5 py-2 font-extrabold text-sm tracking-wide transition-all">Buy Now</a>
+        <a href="https://flap.sh/bnb/TBA" target="_blank" rel="noopener noreferrer" class="btn-buy hidden sm:inline-flex items-center rounded-full px-5 py-2 font-extrabold text-sm tracking-wide transition-all">Buy Now</a>
         <button id="menuBtn" class="md:hidden rounded-xl border border-kraft-500/40 p-2 text-kraft-300" aria-label="Open menu">
           <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
@@ -345,7 +411,7 @@
         <a href="#howtobuy">How to Buy</a>
         <a href="#chart">Chart</a>
         <a href="#pack">The Pack</a>
-        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=2AiLHx92Kznuj1Q84b8gzY15qu8TmXLm2wbRLZM5pump" target="_blank" rel="noopener noreferrer" class="btn-buy mt-1 inline-flex justify-center rounded-full px-5 py-2 font-extrabold text-loft-900">Buy Now</a>
+        <a href="https://flap.sh/bnb/TBA" target="_blank" rel="noopener noreferrer" class="btn-buy mt-1 inline-flex justify-center rounded-full px-5 py-2 font-extrabold text-loft-900">Buy Now</a>
       </div>
     </div>
   </header>
@@ -367,22 +433,22 @@
         <h1 class="reveal delay-2 font-bangers text-6xl leading-[0.9] text-kraft-200 drop-shadow-[0_6px_0_rgba(0,0,0,0.45)] sm:text-7xl lg:text-8xl">
           Anonnymous<br />
           <span class="text-fur-400">Dog</span>
-          <span class="ml-3 align-middle rounded-full border border-snout-500/60 bg-snout-500/15 px-4 py-1 font-outfit text-lg tracking-widest text-snout-400">$ZDOG</span>
+          <span class="ml-3 align-middle rounded-full border border-snout-500/60 bg-snout-500/15 px-4 py-1 font-outfit text-lg tracking-widest text-snout-400">$ZDOGE</span>
         </h1>
 
         <p class="reveal delay-3 mt-6 max-w-xl text-lg leading-relaxed text-kraft-300/90 sm:text-xl">
           Anonymous Dog is the masked meme legend, bringing mystery, chaos, and unstoppable vibes to crypto.
         </p>
         <p class="reveal delay-3 mt-3 max-w-xl text-sm text-kraft-400/80">
-          Nobody knows the face. Everybody knows the bag. The loft is open. The pack is forming. $ZDOG does not sit. $ZDOG hunts candles.
+          Nobody knows the face. Everybody knows the bag. The loft is open. The pack is forming. $ZDOGE does not sit. $ZDOGE hunts candles.
         </p>
 
         <div class="reveal delay-4 mt-8 flex flex-wrap items-center gap-4">
-          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=2AiLHx92Kznuj1Q84b8gzY15qu8TmXLm2wbRLZM5pump" target="_blank" rel="noopener noreferrer" class="btn-buy inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-lg font-black tracking-wide transition-all">
+          <a href="https://flap.sh/bnb/TBA" target="_blank" rel="noopener noreferrer" class="btn-buy inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-lg font-black tracking-wide transition-all">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c.6 3.4-1.5 5-3.8 6.6C5.4 10.4 3 12.2 3 16a9 9 0 0 0 18 0c0-3.6-2-6.4-4.7-8.2C13.8 6.3 12.8 5.2 12 2z"/></svg>
             Buy Now
           </a>
-          <a href="https://dexscreener.com/solana/2AiLHx92Kznuj1Q84b8gzY15qu8TmXLm2wbRLZM5pump" target="_blank" rel="noopener noreferrer" class="btn-chart inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-lg font-bold tracking-wide transition-all">
+          <a href="https://dexscreener.com/bsc/TBA" target="_blank" rel="noopener noreferrer" class="btn-chart inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-lg font-bold tracking-wide transition-all">
             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 17l6-6 4 4 8-8"/></svg>
             Chart
           </a>
@@ -396,8 +462,8 @@
               <span class="h-3 w-3 rounded-full bg-loft-800"></span>
             </span>
             <div class="min-w-0 flex-1">
-              <p class="font-stamp text-[10px] tracking-[0.2em] text-loft-800/80">$ZDOG · SOLANA</p>
-              <p id="caText" class="truncate font-mono text-sm font-bold tracking-wide text-loft-900 sm:text-base">2AiLHx92Kznuj1Q84b8gzY15qu8TmXLm2wbRLZM5pump</p>
+              <p class="font-stamp text-[10px] tracking-[0.2em] text-loft-800/80">$ZDOGE · BNB</p>
+              <p id="caText" class="truncate font-mono text-sm font-bold tracking-wide text-loft-900 sm:text-base">TBA</p>
             </div>
             <button id="copyBtn" type="button" class="shrink-0 rounded-full bg-loft-900 px-4 py-2 text-xs font-extrabold tracking-wider text-kraft-200 hover:bg-loft-800 transition-colors">
               COPY CA
@@ -410,7 +476,7 @@
         <div class="absolute -inset-8 rounded-[40%] bg-fur-500/20 blur-3xl"></div>
         <div class="stamp absolute -left-2 top-4 z-20 px-3 py-1 text-xs sm:-left-6">MASKED</div>
         <div class="stamp absolute -right-1 bottom-16 z-20 rotate-12 px-3 py-1 text-xs border-kraft-600 text-kraft-700 sm:-right-4" style="color:#7a5a38;border-color:#7a5a38">UNSTOPPABLE</div>
-        <img src="logo.jpg" alt="Masked Anonnymous Dog" class="mask-frame floaty relative z-10 w-full object-cover" />
+        <img src="logo.jpg" alt="Masked ZDOGEE" class="mask-frame floaty relative z-10 w-full object-cover" />
         <p class="mt-4 text-center font-stamp text-xs tracking-[0.3em] text-kraft-400">IDENTITY: REDACTED · VIBES: CONFIRMED</p>
       </div>
     </div>
@@ -419,13 +485,13 @@
   <!-- TICKER -->
   <div class="ticker relative z-10 overflow-hidden py-3">
     <div class="ticker-track font-bangers text-2xl tracking-wide text-kraft-400">
-      <span class="px-6">$ZDOG</span><span class="px-6 text-fur-400">•</span>
+      <span class="px-6">$ZDOGE</span><span class="px-6 text-fur-400">•</span>
       <span class="px-6">MYSTERY</span><span class="px-6 text-fur-400">•</span>
       <span class="px-6">CHAOS</span><span class="px-6 text-fur-400">•</span>
       <span class="px-6">UNSTOPPABLE VIBES</span><span class="px-6 text-fur-400">•</span>
       <span class="px-6">MASKED MEME LEGEND</span><span class="px-6 text-fur-400">•</span>
       <span class="px-6">THE PACK IS WATCHING</span><span class="px-6 text-fur-400">•</span>
-      <span class="px-6">$ZDOG</span><span class="px-6 text-fur-400">•</span>
+      <span class="px-6">$ZDOGE</span><span class="px-6 text-fur-400">•</span>
       <span class="px-6">MYSTERY</span><span class="px-6 text-fur-400">•</span>
       <span class="px-6">CHAOS</span><span class="px-6 text-fur-400">•</span>
       <span class="px-6">UNSTOPPABLE VIBES</span><span class="px-6 text-fur-400">•</span>
@@ -451,14 +517,14 @@
     <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
       <article class="paper torn relative overflow-hidden p-8 md:p-10">
         <div class="stamp absolute right-6 top-8 px-3 py-1 text-[10px]">TOP SECRET</div>
-        <p class="font-stamp text-sm text-fur-400">WANTED ON SOLANA</p>
+        <p class="font-stamp text-sm text-fur-400">WANTED ON BNB</p>
         <h3 class="mt-2 font-bangers text-4xl text-kraft-200">The Masked Meme Legend</h3>
         <p class="mt-5 text-lg leading-relaxed text-kraft-300">
           Anonymous Dog is the masked meme legend, bringing mystery, chaos, and unstoppable vibes to crypto.
           Born in a dusty loft, raised on tungsten light, and armed with nothing but a kraft-paper bag and a stare that prints green candles.
         </p>
         <p class="mt-4 leading-relaxed text-kraft-400">
-          No roadmap can contain him. No doxx can unmask him. $ZDOG is the signal in the noise — a pack-first Solana meme with one rule: stay anonymous, stay barking, stay unstoppable.
+          No roadmap can contain him. No doxx can unmask him. $ZDOGE is the signal in the noise — a pack-first BNB meme with one rule: stay anonymous, stay barking, stay unstoppable.
         </p>
         <ul class="mt-8 grid gap-3 sm:grid-cols-3">
           <li class="rounded-2xl border border-kraft-500/25 bg-loft-950/50 px-4 py-3 text-center">
@@ -477,7 +543,7 @@
       </article>
 
       <aside class="relative overflow-hidden rounded-[2rem] border border-kraft-500/30 shadow-kraft">
-        <img src="banner.jpg" alt="Anonnymous Dog in the loft" class="h-full min-h-[320px] w-full object-cover" />
+        <img src="banner.jpg" alt="ZDOGEE in the loft" class="h-full min-h-[320px] w-full object-cover" />
         <div class="absolute inset-0 bg-gradient-to-t from-loft-950/90 via-transparent to-transparent"></div>
         <div class="absolute bottom-0 left-0 right-0 p-6">
           <p class="font-stamp text-xs tracking-[0.28em] text-tungsten">LAST SEEN: THE LOFT</p>
@@ -491,51 +557,87 @@
   <section id="howtobuy" class="relative z-10 mx-auto max-w-7xl px-4 py-10 md:px-6 md:py-16">
     <div class="mb-10 text-center">
       <p class="font-stamp text-xs tracking-[0.32em] text-snout-400">MISSION BRIEFING</p>
-      <h2 class="font-bangers text-5xl text-kraft-200 sm:text-6xl">How to Buy $ZDOG</h2>
-      <p class="mx-auto mt-3 max-w-2xl text-kraft-400">Four steps. One bag. Welcome to Solana. Follow the scent and join the masked pack.</p>
+      <h2 class="font-bangers text-5xl text-kraft-200 sm:text-6xl">How to Buy $ZDOGE</h2>
+      <p class="mx-auto mt-3 max-w-2xl text-kraft-400">Four steps. Pay with BNB on BNB Smart Chain. Follow the scent and join the masked pack.</p>
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <span class="bnb-pill">
+          <svg class="h-5 w-5" viewBox="0 0 32 32" aria-hidden="true">
+            <path fill="#F0C27A" d="M16 4.2l4.2 4.2L16 12.6l-4.2-4.2L16 4.2zm7.6 7.6L27.8 16l-4.2 4.2L19.4 16l4.2-4.2zM16 19.4l4.2 4.2L16 27.8l-4.2-4.2L16 19.4zM4.2 16l4.2-4.2L12.6 16l-4.2 4.2L4.2 16zm11.8-2.5L19.3 16 16 19.3 12.7 16 16 13.5z"/>
+          </svg>
+          <span class="font-mono text-[11px] tracking-[0.22em] text-tungsten">PAY WITH BNB</span>
+        </span>
+        <div class="flex items-center gap-2" aria-hidden="true">
+          <span class="swap-chip border border-kraft-500/40 bg-loft-900 text-tungsten">BNB</span>
+          <svg class="h-5 w-5 text-fur-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-5-5 5 5-5 5"/></svg>
+          <span class="swap-chip btn-buy text-loft-900">$ZDOGE</span>
+        </div>
+      </div>
     </div>
 
-    <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-      <article class="paper relative p-6">
-        <div class="step-num mb-5 flex h-14 w-14 items-center justify-center rounded-full text-3xl">1</div>
-        <div class="mb-3 h-1 w-12 rounded-full bg-fur-400"></div>
-        <h3 class="font-bangers text-3xl text-kraft-200">Get a Wallet</h3>
+    <ol class="buy-path grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+      <li class="paper step-card relative p-6">
+        <div class="mb-5 flex items-center justify-between">
+          <div class="step-num flex h-12 w-12 items-center justify-center rounded-full text-2xl">1</div>
+          <span class="step-icon" aria-hidden="true">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7.5A2.5 2.5 0 0 1 6.5 5h11A2.5 2.5 0 0 1 20 7.5v9A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5v-9Z"/><path stroke-linecap="round" stroke-width="1.8" d="M4 10h16"/></svg>
+          </span>
+        </div>
+        <p class="font-stamp text-[10px] tracking-[0.28em] text-fur-400">WALLET</p>
+        <h3 class="mt-1 font-bangers text-3xl text-kraft-200">Get a Wallet</h3>
         <p class="mt-3 text-sm leading-relaxed text-kraft-400">
-          Download <span class="text-kraft-200 font-semibold">Phantom</span> or <span class="text-kraft-200 font-semibold">Solflare</span>. This is your secret identity on Solana — keep the seed phrase in the vault, never in the loft group chat.
+          Install <span class="text-kraft-200 font-semibold">MetaMask</span> or <span class="text-kraft-200 font-semibold">Trust Wallet</span> and switch the network to <span class="text-kraft-200 font-semibold">BNB Smart Chain</span>. This is your secret identity — keep the seed phrase in the vault, never in the loft group chat.
         </p>
-      </article>
+      </li>
 
-      <article class="paper relative p-6">
-        <div class="step-num mb-5 flex h-14 w-14 items-center justify-center rounded-full text-3xl">2</div>
-        <div class="mb-3 h-1 w-12 rounded-full bg-fur-400"></div>
-        <h3 class="font-bangers text-3xl text-kraft-200">Load SOL</h3>
+      <li class="paper step-card relative p-6">
+        <div class="mb-5 flex items-center justify-between">
+          <div class="step-num flex h-12 w-12 items-center justify-center rounded-full text-2xl">2</div>
+          <span class="step-icon" aria-hidden="true">
+            <svg class="h-6 w-6" viewBox="0 0 32 32"><path fill="currentColor" d="M16 4.2l4.2 4.2L16 12.6l-4.2-4.2L16 4.2zm7.6 7.6L27.8 16l-4.2 4.2L19.4 16l4.2-4.2zM16 19.4l4.2 4.2L16 27.8l-4.2-4.2L16 19.4zM4.2 16l4.2-4.2L12.6 16l-4.2 4.2L4.2 16zm11.8-2.5L19.3 16 16 19.3 12.7 16 16 13.5z"/></svg>
+          </span>
+        </div>
+        <p class="font-stamp text-[10px] tracking-[0.28em] text-fur-400">FUND</p>
+        <h3 class="mt-1 font-bangers text-3xl text-kraft-200">Load BNB</h3>
         <p class="mt-3 text-sm leading-relaxed text-kraft-400">
-          Buy <span class="text-kraft-200 font-semibold">SOL</span> on an exchange and send it to your wallet. SOL is the fuel. No SOL, no swap, no legend.
+          Buy <span class="text-kraft-200 font-semibold">BNB</span> on an exchange and send it to your wallet on BNB Chain. BNB pays the gas and is the token you swap. No BNB, no bag, no legend.
         </p>
-      </article>
+      </li>
 
-      <article class="paper relative p-6">
-        <div class="step-num mb-5 flex h-14 w-14 items-center justify-center rounded-full text-3xl">3</div>
-        <div class="mb-3 h-1 w-12 rounded-full bg-fur-400"></div>
-        <h3 class="font-bangers text-3xl text-kraft-200">Open the Swap</h3>
+      <li class="paper step-card relative p-6">
+        <div class="mb-5 flex items-center justify-between">
+          <div class="step-num flex h-12 w-12 items-center justify-center rounded-full text-2xl">3</div>
+          <span class="step-icon" aria-hidden="true">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7 7h10M7 12h10M7 17h6"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 5.5A1.5 1.5 0 0 1 5.5 4h13A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-13Z"/></svg>
+          </span>
+        </div>
+        <p class="font-stamp text-[10px] tracking-[0.28em] text-fur-400">CONNECT</p>
+        <h3 class="mt-1 font-bangers text-3xl text-kraft-200">Open the Swap</h3>
         <p class="mt-3 text-sm leading-relaxed text-kraft-400">
-          Hit <span class="text-kraft-200 font-semibold">Buy Now</span> to open pump.fun with SOL already set as input and $ZDOG as output. Connect the wallet. Stay masked.
+          Hit <span class="text-kraft-200 font-semibold">Buy Now</span> to open flap.sh with <span class="text-kraft-200 font-semibold">BNB</span> as input and <span class="text-kraft-200 font-semibold">$ZDOGE</span> as output. Connect the wallet. Confirm you are on BNB Smart Chain. Stay masked.
         </p>
-      </article>
+      </li>
 
-      <article class="paper relative p-6">
-        <div class="step-num mb-5 flex h-14 w-14 items-center justify-center rounded-full text-3xl">4</div>
-        <div class="mb-3 h-1 w-12 rounded-full bg-fur-400"></div>
-        <h3 class="font-bangers text-3xl text-kraft-200">Swap & Howl</h3>
+      <li class="paper step-card relative p-6">
+        <div class="mb-5 flex items-center justify-between">
+          <div class="step-num flex h-12 w-12 items-center justify-center rounded-full text-2xl">4</div>
+          <span class="step-icon" aria-hidden="true">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7 8h10l-1.2 9.2a2 2 0 0 1-2 1.8H10.2a2 2 0 0 1-2-1.8L7 8Z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.5 8V6.8A2.5 2.5 0 0 1 12 4.3 2.5 2.5 0 0 1 14.5 6.8V8"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m9 13 2.2 2.2L15.5 11"/></svg>
+          </span>
+        </div>
+        <p class="font-stamp text-[10px] tracking-[0.28em] text-fur-400">SWAP</p>
+        <h3 class="mt-1 font-bangers text-3xl text-kraft-200">Swap BNB → $ZDOGE</h3>
         <p class="mt-3 text-sm leading-relaxed text-kraft-400">
-          Swap SOL for <span class="text-kraft-200 font-semibold">$ZDOG</span>, confirm, and you are in the pack. Mystery, chaos, and unstoppable vibes — now with a bag that matches the mask.
+          Swap <span class="text-kraft-200 font-semibold">BNB</span> for <span class="text-kraft-200 font-semibold">$ZDOGE</span>, confirm the transaction, and you are in the pack. Mystery, chaos, and unstoppable vibes — now with a bag that matches the mask.
         </p>
-      </article>
-    </div>
+      </li>
+    </ol>
 
     <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-      <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=2AiLHx92Kznuj1Q84b8gzY15qu8TmXLm2wbRLZM5pump" target="_blank" rel="noopener noreferrer" class="btn-buy inline-flex items-center rounded-full px-8 py-3.5 text-lg font-black transition-all">Buy $ZDOG Now</a>
-      <a href="https://dexscreener.com/solana/2AiLHx92Kznuj1Q84b8gzY15qu8TmXLm2wbRLZM5pump" target="_blank" rel="noopener noreferrer" class="btn-chart inline-flex items-center rounded-full px-8 py-3.5 text-lg font-bold transition-all">View Chart</a>
+      <a href="https://flap.sh/bnb/TBA" target="_blank" rel="noopener noreferrer" class="btn-buy inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-lg font-black transition-all">
+        <svg class="h-5 w-5" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 4.2l4.2 4.2L16 12.6l-4.2-4.2L16 4.2zm7.6 7.6L27.8 16l-4.2 4.2L19.4 16l4.2-4.2zM16 19.4l4.2 4.2L16 27.8l-4.2-4.2L16 19.4zM4.2 16l4.2-4.2L12.6 16l-4.2 4.2L4.2 16zm11.8-2.5L19.3 16 16 19.3 12.7 16 16 13.5z"/></svg>
+        Buy $ZDOGE with BNB
+      </a>
+      <a href="https://dexscreener.com/bsc/TBA" target="_blank" rel="noopener noreferrer" class="btn-chart inline-flex items-center rounded-full px-8 py-3.5 text-lg font-bold transition-all">View Chart</a>
     </div>
   </section>
 
@@ -544,9 +646,9 @@
     <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
       <div>
         <p class="font-stamp text-xs tracking-[0.32em] text-snout-400">LIVE LOFT FEED</p>
-        <h2 class="font-bangers text-5xl text-kraft-200 sm:text-6xl">$ZDOG Chart</h2>
+        <h2 class="font-bangers text-5xl text-kraft-200 sm:text-6xl">$ZDOGE Chart</h2>
       </div>
-      <a href="https://dexscreener.com/solana/2AiLHx92Kznuj1Q84b8gzY15qu8TmXLm2wbRLZM5pump" target="_blank" rel="noopener noreferrer" class="btn-chart rounded-full px-5 py-2 text-sm font-bold">Open Dexscreener</a>
+      <a href="https://dexscreener.com/bsc/TBA" target="_blank" rel="noopener noreferrer" class="btn-chart rounded-full px-5 py-2 text-sm font-bold">Open Dexscreener</a>
     </div>
     <div class="paper overflow-hidden p-2 md:p-3">
       <style>
@@ -556,8 +658,8 @@
       </style>
       <div id="dexscreener-embed">
         <iframe
-          title="Dexscreener $ZDOG chart"
-          src="https://dexscreener.com/solana/2AiLHx92Kznuj1Q84b8gzY15qu8TmXLm2wbRLZM5pump?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartLeftToolbar=0&chartDefaultOnMobile=1&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
+          title="Dexscreener $ZDOGE chart"
+          src="https://dexscreener.com/bsc/TBA?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartLeftToolbar=0&chartDefaultOnMobile=1&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
           allow="clipboard-write"
         ></iframe>
       </div>
@@ -571,14 +673,10 @@
       <h2 class="mt-2 font-bangers text-5xl text-loft-900 sm:text-6xl">Join the Pack</h2>
       <p class="mx-auto mt-4 max-w-2xl text-loft-800">
         Anonymous Dog is the masked meme legend, bringing mystery, chaos, and unstoppable vibes to crypto.
-        The loft doors are open. Bark in the group. Leave paw prints on the timeline.
+        The loft doors are open. Leave paw prints on the timeline.
       </p>
       <div class="mt-8 flex flex-wrap items-center justify-center gap-6">
-        <a href="https://t.me/AnonnymousZDOG" target="_blank" rel="noopener noreferrer" class="social-orb flex items-center gap-3 rounded-full bg-loft-900 px-6 py-3 text-kraft-200">
-          <img src="tg.png" alt="" class="h-10 w-10 rounded-full" />
-          <span class="font-extrabold">Telegram</span>
-        </a>
-        <a href="https://x.com/AnonnymousZDOG" target="_blank" rel="noopener noreferrer" class="social-orb flex items-center gap-3 rounded-full bg-loft-900 px-6 py-3 text-kraft-200">
+        <a href="https://x.com/AnonnymousZDOGE" target="_blank" rel="noopener noreferrer" class="social-orb flex items-center gap-3 rounded-full bg-loft-900 px-6 py-3 text-kraft-200">
           <img src="x.png" alt="" class="h-10 w-10 rounded-full object-cover" />
           <span class="font-extrabold">Twitter / X</span>
         </a>
@@ -592,16 +690,15 @@
       <div class="flex items-center gap-3">
         <img src="logo.jpg" alt="" class="h-10 w-10 rounded-xl object-cover ring-1 ring-kraft-500" />
         <div>
-          <p class="font-bangers text-xl text-kraft-300">Anonnymous Dog</p>
-          <p class="font-mono text-[11px] tracking-[0.25em] text-fur-400">$ZDOG · SOLANA</p>
+          <p class="font-bangers text-xl text-kraft-300">ZDOGEE</p>
+          <p class="font-mono text-[11px] tracking-[0.25em] text-fur-400">$ZDOGE · BNB</p>
         </div>
       </div>
       <p class="max-w-md text-center text-xs leading-relaxed text-kraft-500 md:text-right">
-        $ZDOG is a meme token created for entertainment. Crypto is chaotic. Do your own research. Not financial advice. The bag hides the face — not the risk.
+        $ZDOGE is a meme token created for entertainment. Crypto is chaotic. Do your own research. Not financial advice. The bag hides the face — not the risk.
       </p>
       <div class="flex items-center gap-3">
-        <a href="https://t.me/AnonnymousZDOG" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><img src="tg.png" alt="Telegram" class="h-8 w-8 rounded-full" /></a>
-        <a href="https://x.com/AnonnymousZDOG" target="_blank" rel="noopener noreferrer" aria-label="X"><img src="x.png" alt="X" class="h-8 w-8 rounded-full object-cover ring-1 ring-kraft-500/40" /></a>
+        <a href="https://x.com/AnonnymousZDOGE" target="_blank" rel="noopener noreferrer" aria-label="X"><img src="x.png" alt="X" class="h-8 w-8 rounded-full object-cover ring-1 ring-kraft-500/40" /></a>
       </div>
     </div>
   </footer>
@@ -611,7 +708,7 @@
   </div>
 
   <script>
-    const CA = "2AiLHx92Kznuj1Q84b8gzY15qu8TmXLm2wbRLZM5pump";
+    const CA = "TBA";
     const menuBtn = document.getElementById("menuBtn");
     const mobileMenu = document.getElementById("mobileMenu");
     const copyBtn = document.getElementById("copyBtn");
